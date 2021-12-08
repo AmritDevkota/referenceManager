@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="papaparse.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Highlights</title>
+</head>
+
+<body>
+    <!-- <button onclick="filter('all')">All</button> -->
+    <button onclick="filter('favorite')">Favorite</button>
+    <button onclick="filter('discard')">Discard</button>
+    <button onclick="filter('nfnd')">NFND</button>
+    <table>
+        <thead>
+            <tr>
+                <th> Reference </th>
+                <th> Citation </th>
+                <th> Action </th>
+            </tr>
+            <tr>
+                <td><input type="text" id="reference"></td>
+                <td><input type="text" id="citation"></td>
+                <td><button id="add" onclick="add()">Add </button></td>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>asdf asd asdf asdkfha jaknka khl l jhl asdjhfjka s dfhka sd fash dfasdhjfhasjkdfh</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Filling for <span id="fillingFor"></span></h1>
+    <!-- <div>
+        <div id="parsed_csv_list"></div>
+    </div> -->
+    <div>
+        <div id="references"></div>
+    </div>
+
+    <br><br>
+    <button onclick="save()">Save</button>
+    <br><br>
+
+    <h1>Filling for <span id="fillingFor2"></span></h1>
+
+
+    <div id="downloadHolder">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+<script src="/upup.min.js"></script>
+<script>
+    UpUp.start({
+        'content-url': 'offline.html',
+        'assets': ['papaparse.min.js', 'manifest.json', 'script.js',
+            'questions.csv', 'offline.html'
+        ]
+    });
+</script>
+
+</html>
