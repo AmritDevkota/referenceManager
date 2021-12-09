@@ -7,26 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="papaparse.min.js"></script>
     <link rel="manifest" href="/manifest.json">
-    <title>Survey Questionnaires</title>
+    <title>Highlights</title>
 </head>
 
 <body>
-    <h1>[O] Filling for <span id="fillingFor"></span></h1>
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('favorite')">Favorite</button>
+    <button onclick="filter('discard')">Discard</button>
+    <button onclick="filter('nfnd')">NFND</button>
+    <table>
+        <thead>
+            <tr>
+                <th> Reference </th>
+                <th> Citation </th>
+                <th> Action </th>
+            </tr>
+            <tr>
+                <td><input type="text" id="reference"></td>
+                <td><input type="text" id="citation"></td>
+                <td><button id="add" onclick="add()">Add </button></td>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>asdf</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+        </tbody>
+    </table>
+
     <div>
-        <div id="parsed_csv_list"></div>
-    </div>
-    <div>
-        <div id="questions"></div>
-    </div>
-
-    <br><br>
-    <button onclick="save()">Save</button>
-    <br><br>
-
-    <h1>[O] Filling for <span id="fillingFor2"></span></h1>
-
-
-    <div id="downloadHolder">
+        <div id="references"></div>
     </div>
 
     <script src="script.js"></script>

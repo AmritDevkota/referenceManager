@@ -1,6 +1,6 @@
 {
-    "name": "Questionnaire Survay",
-    "short_name" : "Questionnaire Survay",
+    "name": "Reference Manager",
+    "short_name" : "Reference Manager",
     "start_url": "/",
     "scope" : "./",
     "icons": [
